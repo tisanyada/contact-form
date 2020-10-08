@@ -1,0 +1,41 @@
+<%- include('./includes/head.ejs'); %>
+    <style>
+        .container{
+            margin-top: 8%;
+        }
+        .login-form{
+            padding: 20px;
+            background-color: rgb(238, 238, 238);
+        }
+    </style>
+</head>
+<body>
+    <%- include('./includes/nav.ejs'); %> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 mx-auto">
+                <form action="/" method="POST" class="login-form">
+                    <p class="badge badge-dark">login</p>
+                    <%- include('./includes/messages.ejs') %> 
+                    <div class="form-group">
+                        <label class="badge badge-secondary">username</label>
+                        <input type="text" name="username" class="form-control" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <label class="badge badge-secondary">password</label>
+                        <input type="password" name="password" class="form-control" placeholder="password">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-sm btn-block btn-success" value="login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/scripts/jquery-3.5.0.js"></script>
+    <script src="/public/scripts/bootstrap.min.js"></script>
+    <script src="/public/scripts/notify.min-0.4.2.js"></script>
+    <script src="/public/scripts/socket.io-2.3.0.js"></script>
+</body>
+</html>
